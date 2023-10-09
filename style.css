@@ -20,6 +20,7 @@ h1 {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: underline #920505;
+    text-shadow: 2px 2px 2px #0000009f;
 }
 
 
@@ -135,14 +136,22 @@ main {
 }
 
 
-.footer {
+footer {
     position: absolute;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
+    left: 0;
     bottom: 0;
-    background-color: #a10909;
+    background-color: #8d0000;
     color: white; 
     text-align: center; 
-    height: 3rem; 
+    height: 2rem; 
+}
+
+.rights {
+
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
