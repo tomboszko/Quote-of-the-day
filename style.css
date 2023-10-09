@@ -19,6 +19,7 @@ h1 {
     padding: 0;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline #920505;
 }
 
 
@@ -26,7 +27,7 @@ main {
     display: flex;
     justify-content: center;
     align-items:first baseline;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
     
     
@@ -77,9 +78,7 @@ main {
     font-weight: bold;
 }
 
-footer {
-    margin-top: 20px;
-}
+
 
 .container_btn {
     width: 100%;
@@ -105,8 +104,11 @@ footer {
 
 #btn:hover {
     background-color: #000000;
-}
 
+}
+#btn:active {
+    transform: scale(0.98);
+}
 
 
 
@@ -122,12 +124,25 @@ footer {
     margin-right: auto;
     margin-bottom: 1rem;
     position: fixed;
-    left: 50vw;
-    top: 50vh;
+    left: 50%;
+    top: 50%;
     z-index: 1000;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+.footer {
+    position: absolute;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    background-color: #a10909;
+    color: white; 
+    text-align: center; 
+    height: 3rem; 
 }

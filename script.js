@@ -4,24 +4,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const photo = document.getElementById('photo');
     const button = document.getElementById('btn');
     const loader = document.getElementById('loader');
-    const showLoader = () => {
+    
+    let showLoader = () => {
         loader.style.display = 'block'; // Show the loader
     };
 
-    const fetchQuote = () => fetch("https://thatsthespir.it/api");
+    let fetchQuote = () => fetch("https://thatsthespir.it/api");
 
-    const updateHTML = (json) => {
+    let updateHTML = (json) => {
         quote.innerHTML = json.quote;
+    
+        if (json.quote.length < 250) {
+            quote.style.fontSize = "2rem";
+        }
+        else if (json.quote.length > 251 && json.quote.length <= 400) {
+            quote.style.fontSize = "1rem";
+        }
+        else if (json.quote.length > 401) {
+            quote.style.fontSize = "0.5rem";
+        }
+    
         author.innerHTML = `-${json.author}`;
         loader.style.display = 'none'; // Hide the loader
     };
 
-    
-
-    
-    const loadImage = (src) => {
+    let loadImage = (src) => {
         return new Promise((resolve, reject) => {
-            const img = new Image();
+            let img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
             img.src = src;
@@ -33,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(async (json) => {
 
             
-            const img = await loadImage(json.photo);
+            let img = await loadImage(json.photo);
             photo.src = img.src;
             updateHTML(json);
             loader.style.display = 'none'; 
@@ -42,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("There was an error!", error);
         });
 
-       
-
     button.addEventListener('click', () => {
 
         showLoader()
@@ -51,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then((response) => response.json())
             .then(async (json) => {
                
-                const img = await loadImage(json.photo);
+                let img = await loadImage(json.photo);
                 photo.src = img.src;
                 updateHTML(json);
             })
