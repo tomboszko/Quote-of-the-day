@@ -1,0 +1,133 @@
+
+
+body {
+    background-color: #8a8989;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    width: 100%;
+    margin-left:0;
+
+}
+
+h1 {
+    font-size:4rem;
+    margin:0;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+    
+}
+
+.main_container {
+    display: flex;
+    align-items: center; 
+    
+}
+
+
+
+.img {
+    width: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: 4px;
+}
+
+.container_quote {
+    text-align: center;
+   height: 250px;
+   width: 750px;
+   background-color: black;
+   color: white;
+   align-items: center;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+
+#quote {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+#author {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.container_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #8d0000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#btn:hover {
+    background-color: #000000;
+}
+
+
+
+
+.loader {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #b60202;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
