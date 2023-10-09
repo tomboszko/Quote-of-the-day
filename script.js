@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             img.onload = () => resolve(img);
             img.onerror = reject;
             img.src = src;
+
         });
+
+        
     };
 
     fetchQuote()
@@ -46,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
             photo.src = img.src;
             updateHTML(json);
             loader.style.display = 'none'; 
+            
         })
         .catch((error) => {
-            console.log("There was an error!", error);
+            alert("There was an error!", error);
         });
 
     button.addEventListener('click', () => {
@@ -63,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 updateHTML(json);
             })
             .catch((error) => {
-                console.log("There was an error!", error);
+                alert("Image not found, please try another Quote", error);
             });
     });
 });
