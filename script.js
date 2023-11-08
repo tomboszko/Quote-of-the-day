@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
 
-        
     };
 
     fetchQuote()

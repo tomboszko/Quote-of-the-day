@@ -10,7 +10,6 @@ body {
 header {
     width: 100%;
     margin-left: 2rem;
-
 }
 
 h1 {
@@ -31,15 +30,12 @@ main {
     align-items:first baseline;
     margin-top: 5rem;
     margin-bottom: 3rem;
-    
-    
+      
 }
 
 .main_container {
     display: flex;
     align-items: center; 
-    
-    
     
 }
 
@@ -80,8 +76,6 @@ main {
     font-weight: bold;
 }
 
-
-
 .container_btn {
     width: 100%;
     display: flex;
@@ -111,8 +105,6 @@ main {
 #btn:active {
     transform: scale(0.98);
 }
-
-
 
 .loader {
     display: none;
