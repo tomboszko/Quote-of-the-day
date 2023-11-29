@@ -17,13 +17,16 @@ h1 {
     margin:0;
     padding: 0;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'roboto', sans-serif;
     text-decoration: underline #920505;
     text-shadow: 2px 2px 2px #0000009f;
 }
 
 
 main {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,6 +57,7 @@ main {
    width: 750px;
    background-color: black;
    color: white;
+   font-family: poppins, sans-serif;
    align-items: center;
    padding-left: 3rem;
    padding-right: 3rem;
@@ -70,6 +74,7 @@ main {
     line-height: 2rem;
     margin-bottom: 1rem;
     font-style: italic;
+    font-family: 'poppins', sans-serif;
 }
 
 #author {
@@ -109,7 +114,7 @@ main {
 .loader {
     display: none;
     border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #b60202;
+    border-top: 4px solid #fffefe;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -143,6 +148,7 @@ footer {
 .rights {
 
     font-size: 0.8rem;
+    font-family: 'roboto', sans-serif;
     margin: 0;
     padding: 0;
     padding-top: 0.5rem;

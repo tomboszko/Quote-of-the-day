@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     let showLoader = () => {
         loader.style.display = 'block'; // Show the loader
+
+        
     };
 
     let fetchQuote = () => fetch("https://thatsthespir.it/api");
@@ -17,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (json.quote.length < 250) {
             quote.style.fontSize = "2rem";
         }
-        else if (json.quote.length > 251 && json.quote.length <= 400) {
+        else if (json.quote.length > 250 && json.quote.length <= 400) {
             quote.style.fontSize = "1rem";
         }
-        else if (json.quote.length > 401) {
+        else if (json.quote.length > 400) {
             quote.style.fontSize = "0.5rem";
         }
     
